@@ -86,8 +86,8 @@ sys.stdout.write(RESET)
 prop_infected = 0.01
 false_pos = 0.01
 p_f_given_e = 0.9
-p_e = 0.9
-p_f = (p_e * prop_infected) + (false_pos*(1-prop_infected))
+p_e = 0.01
+p_f = (p_f_given_e * prop_infected) + (false_pos*(1-prop_infected))
 p_e_given_f = (p_f_given_e*p_e)/p_f
 print("\tE = actually has virus, F = test positive for virus")
 print("\tP(F|E) = {}, P(E)={}, P(F) = (0.9*0.01 + 0.01*(1-0.01)) = {}".format(p_f_given_e, p_e, p_f))
