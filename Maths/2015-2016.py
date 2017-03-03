@@ -60,7 +60,7 @@ print("\n(iv) Let event E be that the sum of the dice equals 2 or 3 and event F 
       " the sum equals 3. Are E and F independent? Explain with reference to the "
       "definition given above")
 sys.stdout.write(RESET)
-print("No, E and F are not independent. Observing E affects the outcome of F. Using the mathematical definition"
+print("No, E and F are not independent. Observing E affects the outcome of F. Using the mathematical definition "
       "P(E ∩ F) = P(E)P(F):")
 print("P(E ∩ F) = 1/36, P(E)P(F) = 1/12 * 1/18 = 1/216")
 print("Thus, E and F are dependent as P(E ∩ F) != P(E)P(F)")
