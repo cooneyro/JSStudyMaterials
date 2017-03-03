@@ -87,9 +87,52 @@ prop_infected = 0.01
 false_pos = 0.01
 p_f_given_e = 0.9
 p_e = 0.01
-p_f = (p_f_given_e * prop_infected) + (false_pos*(1-prop_infected))
-p_e_given_f = (p_f_given_e*p_e)/p_f
+p_f = (p_f_given_e * prop_infected) + (false_pos * (1 - prop_infected))
+p_e_given_f = (p_f_given_e * p_e) / p_f
 print("\tE = actually has virus, F = test positive for virus")
 print("\tP(F|E) = {}, P(E)={}, P(F) = (0.9*0.01 + 0.01*(1-0.01)) = {}".format(p_f_given_e, p_e, p_f))
 print("\tP(E|F) = ({}*{})/{} = {}%".format(p_f_given_e, p_e, p_f, p_e_given_f))
 
+sys.stdout.write(BLUE)
+# Q3
+print("\nQ3: You invent a game where the player bets €1, and rolls two dice. If the sum is 7, the player wins €k, "
+      "and otherwise loses their bet.")
+
+# (i)
+print("\n(i)Define the expectation and variance of a discrete random variable.")
+
+sys.stdout.write(RESET)
+print("\tFor random variable X taking values x1, …, xn the expected value is E[X]=x1*P(X=x1)+… xn*P(X=xn)."
+      "The variance is Var(X)=E[(X-E[X])^2] = (x1-E[X])^2*P(X=x1)+… (xn-E[X])^2*P(X=xn).")
+
+sys.stdout.write(BLUE)
+print("\n(ii) What is the expected reward in this game?")
+
+sys.stdout.write(RESET)
+print("\tProbability of winning = 1/6 -> expected reward = k/6 - 5/6")
+
+sys.stdout.write(BLUE)
+print("\n(iii)What value of k makes the game fair (i.e. makes the expected reward zero)?What is the variance "
+      "of the reward in this case ?")
+
+sys.stdout.write(RESET)
+print("\tTo make the expected reward zero, k=5. Variance = (5-0)^2 * 1/6 + (-1-0)^2 * 5/6 = 5^2/6 + 5/6 = 5.")
+
+sys.stdout.write(BLUE)
+print("\n(iv)For two independent random variables X and Y show that Var(X+Y)=Var(X)+Var(Y). "
+      "Hint: Recall that E[X+Y]=E[X]+E[Y] and that when X and Y are independent then E[XY]=E[X]E[Y]")
+
+sys.stdout.write(RESET)
+print("\tVar(X+Y) = E[(X+Y)^2] - E[X+Y]^2 ")
+print("\t         = E[X^2 + 2XY + Y^2] - (E[X] + E[Y])^2 ")
+print("\t         = E[X^2] + 2E[XY] + E[Y^2] - E[X]^2 - 2E[X]E[Y] - E[Y]^2 ")
+print("\t         = E[X^2] - E[X]^2 + E[Y^2] - E[Y]^2")
+print("\t         = Var(X) + Var(Y)")
+
+sys.stdout.write(BLUE)
+print("\n(v)Suppose that you play the game 2 times in a row with k=5.What is the expected value of the reward "
+      "(i.e. of the aggregate winnings after playing 2 times)?What is its variance ? What is the expectation "
+      "and variance of the reward after 100 plays ?")
+
+sys.stdout.write(RESET)
+print("\tExpected value = 0")
