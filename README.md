@@ -1,2 +1,2 @@
 # JSStudyMaterials
-Revision and study materials for 3rd Year CS
+Revision and study materials for 3rd Year CS exams
