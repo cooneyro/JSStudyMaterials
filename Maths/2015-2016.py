@@ -64,4 +64,3 @@ print("No, E and F are not independent. Observing E affects the outcome of F. Us
       "P(E ∩ F) = P(E)P(F):")
 print("P(E ∩ F) = 1/36, P(E)P(F) = 1/12 * 1/18 = 1/216")
 print("Thus, E and F are dependent as P(E ∩ F) != P(E)P(F)")
-print
