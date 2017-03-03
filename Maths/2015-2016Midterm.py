@@ -135,4 +135,4 @@ print("\n(v)Suppose that you play the game 2 times in a row with k=5.What is the
       "and variance of the reward after 100 plays ?")
 
 sys.stdout.write(RESET)
-print("\tExpected value = 0")
+print("\tExpected value = 0 for both. Variance = 10 for 2 plays, 500 for 100 plays")
